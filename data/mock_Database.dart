@@ -2,21 +2,21 @@ import '../models/zutaten.dart';
 import 'dataBase_repository.dart';
 
 class MockDatabaseZutaten implements DataBaseRepositoryZutaten {
-  Map<int, Zutaten> ZutatenData = {}; // Typisierte Map für Zutaten-Daten
+  Map<int, Zutaten> ZutatenData = {};                               // Typisierte Map für Zutaten-Daten
 
   @override
   void addZutat(int id, Zutaten) {
-    ZutatenData[id] = Zutaten; // Füge eine neue Zutat in Zutatendata Map ein.
+    ZutatenData[id] = Zutaten;                                      // Füge eine neue Zutat in Zutatendata Map ein.
   }
 
   @override
   List<String> getAllZutatenTitles() {
-    List<String> alleZutatenTitles = []; // Liste für alle Zutaten-Titel
+    List<String> alleZutatenTitles = [];                            // Liste für alle Zutaten-Titel
 
     ZutatenData.forEach((key, zutat) {
       // Füge alle Zutaten-Titel in die Liste und gebe sie aus
       alleZutatenTitles.add(zutat
-          .name); // Angenommen, 'name' ist das Attribut für den Titel der Zutat
+          .name);                                                   // Angenommen, 'name' ist das Attribut für den Titel der Zutat
     });
 
     return alleZutatenTitles;
