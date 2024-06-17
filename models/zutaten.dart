@@ -9,6 +9,4 @@ class Zutaten {
     required this.menge,
     required this.einheit,
   });
-
-  
 }
